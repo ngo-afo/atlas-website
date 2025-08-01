@@ -80,8 +80,7 @@
 
         <!-- 2. Interactive Services Section (NEW Tabbed Layout) -->
         <section id="services-tabs" class="py-16 md:py-20 bg-white fade-in-section">
-            <!-- Alpine.js component for the tab system. It now reads the URL to set the initial tab. -->
-            <div class="max-w-screen-xl mx-auto px-6" x-data="serviceTabs()" x-init="init()">
+            <div class="max-w-screen-xl mx-auto px-6" x-data="{ tab: 'accounting' }">
                 <!-- Tab Buttons -->
                 <div class="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 border-b border-gray-200">
                     <button @click="tab = 'accounting'" :class="{ 'bg-blue-600 text-white': tab === 'accounting', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'accounting' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
@@ -286,45 +285,6 @@
     </footer>
     
     <script>
-        // This function initializes the Alpine.js component for the tabs.
-        function serviceTabs() {
-            return {
-                tab: 'accounting', // Default tab
-                init() {
-                    // Check for a tab name in the URL hash (e.g., #operations)
-                    const hash = window.location.hash.substring(1);
-                    // Check for a tab name in the URL query parameters (e.g., ?tab=data)
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const tabParam = urlParams.get('tab');
-                    
-                    const validTabs = ['accounting', 'operations', 'data', 'reporting'];
-                    
-                    // Prioritize hash, then query parameter, then default.
-                    if (hash && validTabs.includes(hash)) {
-                        this.tab = hash;
-                    } else if (tabParam && validTabs.includes(tabParam)) {
-                        this.tab = tabParam;
-                    }
-                    
-                    // Scroll to the tabs section if a tab is specified in the URL
-                    if(hash || tabParam) {
-                        const servicesSection = document.getElementById('services-tabs');
-                        if(servicesSection) {
-                           servicesSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }
-
-                    // This allows the back/forward browser buttons to work with the tabs.
-                    window.addEventListener('hashchange', () => {
-                        const newHash = window.location.hash.substring(1);
-                        if (newHash && validTabs.includes(newHash)) {
-                            this.tab = newHash;
-                        }
-                    });
-                }
-            }
-        }
-
         // JavaScript for scroll animations
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver(entries => {
