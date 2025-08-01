@@ -1,164 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Atlas FinOps</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Atlas FinOps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Styles for scroll animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Style for the bio content transition */
+        .bio-content {
+            transition: max-height 0.5s ease-in-out;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- ✅ Global Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-gray-900">Atlas FinOps</a>
-      <div class="hidden md:flex space-x-6 items-center">
-        <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
-        <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
-        <a href="about.html" class="text-blue-600 font-semibold">About</a>
-        <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-
-    <!-- Hero Section -->
-    <section class="bg-gray-50 text-center py-20 md:py-28">
-      <div class="container mx-auto px-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-          About Atlas FinOps
-        </h1>
-        <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-          We are a team of dedicated finance professionals committed to providing institutional-quality operational support to the investment management and small business communities.
-        </p>
-      </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Philosophy</h2>
-        <p class="mt-6 text-xl text-gray-600">
-          We believe that a world-class financial infrastructure shouldn't be exclusive to the largest firms. Our mission is to democratize access to top-tier finance and operations talent, allowing our clients to compete and thrive.
-          We don't believe in one-size-fits-all solutions; we listen to your needs and build the specific operational strategy that works for you.
-        </p>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="py-16 md:py-24 bg-blue-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet Our Leadership</h2>
-          <p class="mt-4 text-lg text-gray-600">Our team's multi-disciplinary expertise is our greatest asset.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <!-- Stephen -->
-          <div class="bg-white p-8 rounded-lg shadow-md text-center">
-            <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://placehold.co/256x256/E2E8F0/4A5568?text=SG" alt="Stephen Grofcsik">
-            <h3 class="text-2xl font-bold text-blue-700">Stephen Grofcsik, CPA</h3>
-            <p class="text-md font-semibold text-gray-500 mb-4">Managing Partner</p>
-            <p class="text-gray-600">
-              Prior to founding Atlas, Stephen served as Operations Manager at a $400 million private equity fund...
-            </p>
-          </div>
-
-          <!-- Blase -->
-          <div class="bg-white p-8 rounded-lg shadow-md text-center">
-            <img class="w-32 h-32 rounded-full mx-auto mb-4" src="https://placehold.co/256x256/E2E8F0/4A5568?text=BC" alt="Blase Ciabaton">
-            <h3 class="text-2xl font-bold text-blue-700">Blase Ciabaton</h3>
-            <p class="text-md font-semibold text-gray-500 mb-4">Partner</p>
-            <p class="text-gray-600">
-              Blase played an integral role in developing the personnel, processes, and procedures for a leading outsourced CFO provider...
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Impact in Action</h2>
-          <p class="mt-4 text-lg text-gray-600">We provide tangible results. Here’s how we've helped clients like you.</p>
-        </div>
-        <div class="max-w-4xl mx-auto space-y-8">
-          <!-- Case 1 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-lg p-8">
-            <h3 class="text-xl font-semibold text-blue-700">Case Study: Start-up Hedge Fund Launch</h3>
-            <p class="mt-3 text-gray-600"><strong>Challenge:</strong> A new fund needed to establish institutional-grade financial infrastructure on a tight budget...</p>
-          </div>
-          <!-- Case 2 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-lg p-8">
-            <h3 class="text-xl font-semibold text-blue-700">Case Study: SMB Growth Scaling</h3>
-            <p class="mt-3 text-gray-600"><strong>Challenge:</strong> A fast-growing tech company's bookkeeping couldn't keep up, leading to inaccurate financials...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-blue-700 text-white">
-      <div class="container mx-auto px-6 py-16 text-center">
-        <h2 class="text-3xl font-bold">Let's Build Your Financial Foundation</h2>
-        <p class="mt-4 opacity-90 max-w-2xl mx-auto">
-          Ready to discuss how our team can support your firm's success? Contact us today for a complimentary consultation.
-        </p>
-        <a href="#" class="mt-8 inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-200 transition">
-          Get in Touch
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html">
+          <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-12">
         </a>
-      </div>
-    </section>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+          <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+          <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+          <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+          </div>
+      </nav>
+    </header>
 
-  </main>
+    <main>
 
-  <!-- ✅ Global Footer -->
-  <footer class="bg-gray-800 text-gray-300">
-    <div class="max-w-screen-xl mx-auto px-6 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Company Info -->
-        <div class="md:col-span-2">
-          <h3 class="text-xl font-bold text-white mb-4">Atlas FinOps</h3>
-          <p class="max-w-md">Your expert partner in outsourced financial operations for investment managers and growing businesses.</p>
-        </div>
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
-            <li><a href="about.html" class="hover:text-white transition">About</a></li>
-            <li><a href="#" class="hover:text-white transition">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-          <ul class="space-y-2">
-            <li><a href="mailto:info@atlasfinops.com" class="hover:text-white transition">info@atlasfinops.com</a></li>
-            <li><p>(555) 123-4567</p></li>
-          </ul>
+        <section class="bg-gray-50 text-center py-20 md:py-28">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+                    About Atlas
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    We are a team of dedicated finance professionals committed to providing institutional-quality operational support to the investment management and small business communities.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Our Philosophy</h2>
+                    <p class="mt-6 text-xl text-gray-600">
+                        We believe that a world-class financial infrastructure shouldn't be exclusive to the largest firms. Our mission is to democratize access to top-tier finance and operations talent, allowing our clients to compete and thrive. We don't believe in one-size-fits-all solutions; we listen to your needs and build the specific operational strategy that works for you.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-blue-50 fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Meet Our Leadership</h2>
+                    <p class="mt-4 text-lg text-gray-600">Our team's multi-disciplinary expertise is our greatest asset.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border">
+                        <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md">
+                            <div class="flex items-center space-x-4">
+                                <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=SG" alt="Headshot of Stephen Grofcsik">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold text-blue-800">Stephen Grofcsik, CPA</h3>
+                                    <p class="text-md font-semibold text-gray-500">Managing Partner</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="bio-content" style="max-height: 0;">
+                            <p class="text-gray-600 text-left pt-6">
+                                Prior to founding Atlas Financial Operations, Stephen Grofcsik served as Operations Manager at Virage Capital Management LP, where he oversaw a $400 million private equity fund in the litigation finance space. The fund’s unique strategy required a multi-disciplinary approach, integrating expertise in finance, law, and information technology. Mr. Grofcsik served as the primary liaison for the fund’s audit, accounting, tax, and valuation functions. His role also encompassed managing the day-to-day operations of the fund such as financial reporting, investor communications, treasury operations, and portfolio monitoring. In addition to overseeing day-to-day operations, his responsibilities extended to supporting key initiatives such as fundraising, transaction structuring, and due diligence. Prior to Virage, Mr. Grofcsik was a Finance Director for TFI International, a Canadian based transportation and logistics company operating across the United States, Canada and Mexico through its subsidiaries. In this role, Mr. Grofcsik provided operational oversight and support to several independent operating divisions representing roughly $1 billion in annual revenue. He worked with the division management teams to achieve budget performance, improve profitability, realize cost synergies, and implement strategic plans to grow the business. In addition, Mr. Grofcsik performed due diligence and valuation for several potential acquisitions. Prior to joining TForce Final Mile, Mr. Grofcsik worked at Rothstein Kass & Company, PLLC, where he supervised audits for long/short equity funds, commodity derivative funds, fund of funds, and managed accounts. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel.  Prior to joining Rothstein Kass & Company, Mr. Grofcsik worked for Netherland, Sewell, & Associates where he supported oil and gas reserve evaluation engagements and prepared SEC reserve reports for large oil and gas clients. Mr. Grofcsik received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2003 and became a Certified Public Accountant in 2011.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border">
+                         <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md">
+                            <div class="flex items-center space-x-4">
+                                <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=HB" alt="Headshot of Harrison Blase">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold text-blue-800">Harrison Blase, CPA</h3>
+                                    <p class="text-md font-semibold text-gray-500">Partner</p>
+                                </div>
+                            </div>
+                            <svg class="w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="bio-content" style="max-height: 0;">
+                            <p class="text-gray-600 text-left pt-6">
+                                Harrison Blase currently serves as the Chief Financial Officer of an Arizona Alternative Business Structure (“ABS”) and was most recently in the same role, and a Partner, with Virage Capital Management LP. Mr. Blase was with Virage for over a decade and helped the Investment Manager grow from a strategic seed investor relationship to over a billion dollars of assets under management and earn a place as one of the trailblazers in the litigation finance space. This includes being one of the first asset managers to securitize a portfolio of litigation backed loans and serve as the capital partner to an ABS. Mr. Blase was responsible for managing the audit, tax, accounting, investor reporting, treasury, and valuation process for each of the investment strategies and management company entities. In total, the Virage investment management complex encompassed over three dozen entities and included varied structures, fee mechanics, waterfalls, and reporting obligations. Before joining Virage, Mr. Blase served as a Senior Operations Manager for Kaufman Rossin Fund Services. In this role, Mr. Blase provided technical accounting expertise and client support for over thirty client relationships through oversight of the Dallas accounting team. Mr. Blase was also a member of the Audit Liaison Committee, which oversees the timely completion of all the Firm’s client audits nationwide. Prior to joining Kaufman Rossin Fund Services, Mr. Blase and his partners founded Blue River Partners. Mr. Blase played an integral role in developing the personnel, processes and procedures for Blue River’s outsourced CFO offering. Some of the services provided by the offering include the selection and interface with the administrator, auditor, tax preparer and prime broker; and oversight of the accounting and investor reporting for several private equity funds. Before founding Blue River, Mr. Blase was the Controller at Swank Capital. In this role, Mr. Blase was responsible for financial reporting, managing Fund audits, account setup, internal control systems, and support for various compliance initiatives. In addition, Mr. Blase was the primary interface with the Firm’s auditors, administrators, and banking groups for all daily management issues. This included daily monitoring of cash and position reconciliations, the review and distribution of performance reporting, and maintaining the flow of critical financial and tax information to investors. Prior to joining Swank Capital, Mr. Blase worked for Rothstein Kass & Company, PLLC, helping facilitate audits and tax returns for long /short equity Funds, commodity derivative Funds, and Fund of Funds. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel. His primary focus was on funds in the energy sector; specifically Swank Capital, LLC and a multi-billion-dollar commodity fund complex. Mr. Blase received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2004 and became a Certified Public Accountant in 2006.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Our Impact in Action</h2>
+                    <p class="mt-4 text-lg text-gray-600">We provide tangible results. Here’s how we've helped clients like you.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-blue-800">Start-up Hedge Fund Launch</h3>
+                        <p class="mt-4 text-gray-600"><strong>Challenge:</strong> A new fund needed to establish institutional-grade financial infrastructure on a tight budget before its launch.</p>
+                        <p class="mt-3 text-gray-600"><strong>Solution:</strong> Atlas FinOps implemented a full accounting system, established valuation policies, and managed all setup with fund administrators and prime brokers.</p>
+                        <p class="mt-3 text-gray-600"><strong>Result:</strong> The fund launched smoothly with day-one operational readiness, impressing early investors and allowing the portfolio manager to focus solely on investment strategy.</p>
+                    </div>
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-blue-800">SMB Growth Scaling</h3>
+                        <p class="mt-4 text-gray-600"><strong>Challenge:</strong> A fast-growing tech company's bookkeeping couldn't keep up, leading to inaccurate financial reports and a lack of forward visibility.</p>
+                        <p class="mt-3 text-gray-600"><strong>Solution:</strong> We overhauled their accounting processes, provided monthly board-ready financial reporting, and created a dynamic financial model for forecasting.</p>
+                        <p class="mt-3 text-gray-600"><strong>Result:</strong> The leadership team gained clear visibility into their financial health, enabling them to secure a new round of funding and make data-driven strategic decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-blue-700 text-white">
+            <div class="max-w-screen-xl mx-auto px-6 py-20 text-center">
+                <h2 class="text-4xl font-bold">Let's Build Your Financial Foundation</h2>
+                <p class="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
+                    Ready to discuss how our team can support your firm's success? Contact us today for a complimentary consultation.
+                </p>
+                <a href="contact.html" class="mt-8 inline-block bg-white text-blue-700 font-semibold px-10 py-4 rounded-md hover:bg-gray-200 transition text-lg">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-800 text-gray-300">
+      <div class="max-w-screen-xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-bold text-white mb-4">Atlas FinOps</h3>
+            <p class="max-w-md">Your expert partner in outsourced financial operations for investment managers and growing businesses.</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="about.html" class="hover:text-white transition">About</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
-        <p>&copy; 2025 Atlas Financial Operations. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+    
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    
+    <script>
+        // JavaScript for expandable bios
+        document.addEventListener('DOMContentLoaded', () => {
+            const bioToggles = document.querySelectorAll('.bio-toggle');
+
+            bioToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('svg');
+
+                    // Check if the content is currently expanded
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        // Collapse the bio
+                        content.style.maxHeight = '0px';
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        // Expand the bio
+                        // Set max-height to the scroll height to show all content
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
