@@ -37,6 +37,9 @@
             padding-top: 1rem;
         }
         /* Hover effect for bio cards */
+        .bio-card {
+            align-self: start;
+        }
         .bio-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -105,7 +108,7 @@
                     <p class="mt-4 text-lg text-gray-600">Our team's multi-disciplinary expertise is our greatest asset.</p>
                     <p class="mt-2 text-sm text-gray-500">Click on a team member to learn more about their background</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
                     
                     <!-- Stephen Grofcsik Bio -->
                     <div class="bio-card bg-white p-6 md:p-8 rounded-lg shadow-lg border transition-all duration-300">
