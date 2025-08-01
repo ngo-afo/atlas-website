@@ -43,7 +43,10 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="index.html" class="flex-shrink-0">
-          <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-12">
+          <!-- Updated logo source -->
+          <img src="atlas-finops-logo.png" 
+               onerror="this.onerror=null; this.src='https://placehold.co/150x50/003366/FFFFFF?text=Atlas+FinOps&font=inter';" 
+               alt="Atlas FinOps Logo" class="h-12">
         </a>
         <div class="hidden md:flex space-x-6 items-center">
           <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
@@ -52,7 +55,7 @@
           <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
         </div>
         <div class="md:hidden">
-          <!-- Mobile menu button -->
+          <!-- Mobile menu button can be added here -->
            <button class="text-gray-600 hover:text-blue-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
            </button>
@@ -77,27 +80,20 @@
 
         <!-- 2. Interactive Services Section (NEW Tabbed Layout) -->
         <section id="services-tabs" class="py-16 md:py-20 bg-white fade-in-section">
-            <div class="max-w-screen-xl mx-auto px-6" x-data="{ 
-                tab: getInitialTab(),
-                init() {
-                    // Listen for tab changes from URL
-                    window.addEventListener('popstate', () => {
-                        this.tab = getInitialTab();
-                    });
-                }
-            }">
+            <!-- Alpine.js component for the tab system. It now reads the URL to set the initial tab. -->
+            <div class="max-w-screen-xl mx-auto px-6" x-data="serviceTabs()" x-init="init()">
                 <!-- Tab Buttons -->
                 <div class="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 border-b border-gray-200">
-                    <button @click="tab = 'accounting'; updateURL('accounting')" :class="{ 'bg-blue-600 text-white': tab === 'accounting', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'accounting' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
+                    <button @click="tab = 'accounting'" :class="{ 'bg-blue-600 text-white': tab === 'accounting', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'accounting' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
                         Accounting & Finance
                     </button>
-                    <button @click="tab = 'operations'; updateURL('operations')" :class="{ 'bg-blue-600 text-white': tab === 'operations', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'operations' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
+                    <button @click="tab = 'operations'" :class="{ 'bg-blue-600 text-white': tab === 'operations', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'operations' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
                         Operations
                     </button>
-                    <button @click="tab = 'data'; updateURL('data')" :class="{ 'bg-blue-600 text-white': tab === 'data', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'data' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
+                    <button @click="tab = 'data'" :class="{ 'bg-blue-600 text-white': tab === 'data', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'data' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
                         Data Analysis
                     </button>
-                    <button @click="tab = 'reporting'; updateURL('reporting')" :class="{ 'bg-blue-600 text-white': tab === 'reporting', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'reporting' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
+                    <button @click="tab = 'reporting'" :class="{ 'bg-blue-600 text-white': tab === 'reporting', 'bg-gray-100 text-gray-600 hover:bg-gray-200': tab !== 'reporting' }" class="px-4 py-2.5 text-sm md:text-base font-semibold rounded-t-lg transition-colors duration-300">
                         Custom Reporting
                     </button>
                 </div>
@@ -282,35 +278,51 @@
               <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
             </ul>
           </div>
-          <!-- Contact Info -->
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-            <ul class="space-y-2">
-              <li><a href="mailto:info@atlasfinops.com" class="hover:text-white transition">info@atlasfinops.com</a></li>
-              <li><p>(555) 123-4567</p></li>
-            </ul>
-          </div>
         </div>
-        <div class="mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
-          <p>&copy; 2025 Atlas Financial Operations. All Rights Reserved.</p>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <p>&copy; 2024 Atlas FinOps. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
     
     <script>
-        // Function to get initial tab from URL parameter
-        function getInitialTab() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const tabParam = urlParams.get('tab');
-            const validTabs = ['accounting', 'operations', 'data', 'reporting'];
-            return validTabs.includes(tabParam) ? tabParam : 'accounting';
-        }
+        // This function initializes the Alpine.js component for the tabs.
+        function serviceTabs() {
+            return {
+                tab: 'accounting', // Default tab
+                init() {
+                    // Check for a tab name in the URL hash (e.g., #operations)
+                    const hash = window.location.hash.substring(1);
+                    // Check for a tab name in the URL query parameters (e.g., ?tab=data)
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const tabParam = urlParams.get('tab');
+                    
+                    const validTabs = ['accounting', 'operations', 'data', 'reporting'];
+                    
+                    // Prioritize hash, then query parameter, then default.
+                    if (hash && validTabs.includes(hash)) {
+                        this.tab = hash;
+                    } else if (tabParam && validTabs.includes(tabParam)) {
+                        this.tab = tabParam;
+                    }
+                    
+                    // Scroll to the tabs section if a tab is specified in the URL
+                    if(hash || tabParam) {
+                        const servicesSection = document.getElementById('services-tabs');
+                        if(servicesSection) {
+                           servicesSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
 
-        // Function to update URL without refreshing page
-        function updateURL(tab) {
-            const url = new URL(window.location);
-            url.searchParams.set('tab', tab);
-            window.history.pushState({}, '', url);
+                    // This allows the back/forward browser buttons to work with the tabs.
+                    window.addEventListener('hashchange', () => {
+                        const newHash = window.location.hash.substring(1);
+                        if (newHash && validTabs.includes(newHash)) {
+                            this.tab = newHash;
+                        }
+                    });
+                }
+            }
         }
 
         // JavaScript for scroll animations
