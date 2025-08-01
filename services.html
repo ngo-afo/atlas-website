@@ -19,6 +19,16 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Styles for scroll animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -64,7 +74,7 @@
         <!-- 2. Detailed Services Sections -->
 
         <!-- Service 1: Accounting & Finance -->
-        <section id="accounting" class="py-16 md:py-24 bg-white">
+        <section id="accounting" class="py-16 md:py-24 bg-white fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div class="lg:col-span-1 text-center">
@@ -73,12 +83,12 @@
                     </div>
                     <div class="lg:col-span-2">
                         <p class="text-lg text-gray-600 mb-6">Our foundation is built on providing a robust and reliable accounting function. We handle the details so you can focus on the big picture.</p>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Full-service bookkeeping and general ledger management.</li>
-                            <li>Financial statement preparation (Balance Sheet, P&L, Cash Flow).</li>
-                            <li>Complex Net Asset Value (NAV) and shadow NAV calculations.</li>
-                            <li>Budgeting, forecasting, and variance analysis.</li>
-                            <li>Coordination with auditors and tax professionals.</li>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Full-service bookkeeping and general ledger management.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Financial statement preparation (Balance Sheet, P&L, Cash Flow).</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Complex Net Asset Value (NAV) and shadow NAV calculations.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Budgeting, forecasting, and variance analysis.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Coordination with auditors and tax professionals.</li>
                         </ul>
                     </div>
                 </div>
@@ -86,17 +96,17 @@
         </section>
 
         <!-- Service 2: Operations (Layout Reversed) -->
-        <section id="operations" class="py-16 md:py-24 bg-blue-50">
+        <section id="operations" class="py-16 md:py-24 bg-blue-50 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div class="lg:col-span-2 lg:order-last">
                         <p class="text-lg text-gray-600 mb-6">We streamline your day-to-day processes, selecting and managing the tools and vendors that best fit your unique business needs.</p>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Vendor selection and management (administrators, auditors, etc.).</li>
-                            <li>Treasury and cash management services.</li>
-                            <li>Project management for system implementations or process improvements.</li>
-                            <li>Development of internal controls and procedures.</li>
-                            <li>Portfolio and investment monitoring support.</li>
+                        <ul class="space-y-3 text-gray-700">
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Vendor selection and management (administrators, auditors, etc.).</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Treasury and cash management services.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Project management for system implementations or process improvements.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Development of internal controls and procedures.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Portfolio and investment monitoring support.</li>
                         </ul>
                     </div>
                     <div class="lg:col-span-1 text-center lg:order-first">
@@ -108,7 +118,7 @@
         </section>
 
         <!-- Service 3: Data Analysis -->
-        <section id="data" class="py-16 md:py-24 bg-white">
+        <section id="data" class="py-16 md:py-24 bg-white fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                     <div class="lg:col-span-1 text-center">
@@ -117,12 +127,12 @@
                     </div>
                     <div class="lg:col-span-2">
                         <p class="text-lg text-gray-600 mb-6">Our analytical capabilities set us apart. We transform large, complex datasets into clear, actionable insights for better decision-making.</p>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Big data aggregation from multiple sources.</li>
-                            <li>Advanced financial modeling and projections.</li>
-                            <li>Sensitivity analysis and stress testing.</li>
-                            <li>Compensation, fee structuring, and waterfall modeling.</li>
-                            <li>Handling of complex, illiquid asset cases.</li>
+                        <ul class="space-y-3 text-gray-700">
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Big data aggregation from multiple sources.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Advanced financial modeling and projections.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Sensitivity analysis and stress testing.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Compensation, fee structuring, and waterfall modeling.</li>
+                           <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Handling of complex, illiquid asset cases.</li>
                         </ul>
                     </div>
                 </div>
@@ -130,16 +140,16 @@
         </section>
 
         <!-- Service 4: Custom Reporting (Layout Reversed) -->
-        <section id="reporting" class="py-16 md:py-24 bg-blue-50">
+        <section id="reporting" class="py-16 md:py-24 bg-blue-50 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
                      <div class="lg:col-span-2 lg:order-last">
                         <p class="text-lg text-gray-600 mb-6">We design and deliver visually appealing, timely, and accurate reports that inform stakeholders and empower leadership.</p>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Investor and stakeholder reporting packages.</li>
-                            <li>Custom management dashboards (KPIs, financial metrics).</li>
-                            <li>Board of Directors and advisory board presentations.</li>
-                            <li>Regulatory and compliance reporting support.</li>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Investor and stakeholder reporting packages.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Custom management dashboards (KPIs, financial metrics).</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Board of Directors and advisory board presentations.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">&#10003;</span>Regulatory and compliance reporting support.</li>
                         </ul>
                     </div>
                     <div class="lg:col-span-1 text-center lg:order-first">
@@ -151,7 +161,7 @@
         </section>
 
         <!-- 3. Who We Serve Section -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-16 md:py-24 bg-white fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Who We Serve</h2>
@@ -160,28 +170,42 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200 shadow-lg">
                         <h3 class="text-3xl font-bold text-blue-800 mb-4">Key Industries</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700">
-                            <li>Hedge Funds</li>
-                            <li>Private Equity & Venture Capital</li>
-                            <li>Family Offices</li>
-                            <li>Real Estate Investment Firms</li>
-                            <li>Small & Medium-Sized Businesses (SMBs)</li>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>Hedge Funds</li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>Private Equity & Venture Capital</li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Family Offices</li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>Real Estate Investment Firms</li>
+                            <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 12v.01M12 12v.01M12 16v.01M12 16v.01M12 20v.01M12 20v.01M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>Small & Medium-Sized Businesses (SMBs)</li>
                         </ul>
                     </div>
                     <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200 shadow-lg">
                         <h3 class="text-3xl font-bold text-blue-800 mb-4">Typical Client Profile</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700">
-                            <li>Start-up to $500M+ AUM investment funds</li>
-                            <li>Businesses with 5-100 employees</li>
-                            <li>Firms seeking institutional-grade finance functions</li>
-                            <li>Companies preparing for an audit or capital raise</li>
+                        <ul class="space-y-3 text-gray-700">
+                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>Start-up to $500M+ AUM investment funds</li>
+                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Businesses with 5-100 employees</li>
+                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M9 6h6M9 18h6M9 12h6M5 12h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12a2 2 0 100 4h14a2 2 0 100-4H5z"></path></svg>Firms seeking institutional-grade finance functions</li>
+                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>Companies preparing for an audit or capital raise</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- 4. Testimonial Section -->
+        <section class="py-16 md:py-24 bg-blue-50 fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6 text-center">
+                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900">What Our Clients Say</h2>
+                 <div class="mt-12 max-w-3xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-xl italic text-gray-600">"Working with Atlas FinOps was a game-changer for our fund. Their expertise allowed us to professionalize our back office, which was a key factor in our latest capital raise. They are more than a service provider; they are a true partner."</p>
+                        <p class="mt-6 font-semibold text-gray-900">- John Doe, Managing Partner</p>
+                        <p class="text-sm text-gray-500">Startup Hedge Fund</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
 
-        <!-- 4. CTA Section -->
+        <!-- 5. CTA Section -->
         <section class="bg-blue-700 text-white">
             <div class="max-w-screen-xl mx-auto px-6 py-20 text-center">
                 <h2 class="text-4xl font-bold">Ready to Streamline Your Operations?</h2>
@@ -218,6 +242,25 @@
         </div>
       </div>
     </footer>
+    
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 
 </body>
 </html>
