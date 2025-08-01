@@ -25,8 +25,23 @@
         }
         /* Style for the bio content transition */
         .bio-content {
-            transition: max-height 0.5s ease-in-out;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
             overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .bio-content.expanded {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        /* Hover effect for bio cards */
+        .bio-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .bio-toggle:focus {
+            outline: 2px solid #3B82F6;
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -77,11 +92,13 @@
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Meet Our Leadership</h2>
                     <p class="mt-4 text-lg text-gray-600">Our team's multi-disciplinary expertise is our greatest asset.</p>
+                    <p class="mt-2 text-sm text-gray-500">Click on a team member to learn more about their background</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border">
-                        <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md">
+                    <!-- Stephen Grofcsik Bio -->
+                    <div class="bio-card bg-white p-6 md:p-8 rounded-lg shadow-lg border transition-all duration-300">
+                        <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none rounded-md p-2 -m-2" data-target="stephen-bio">
                             <div class="flex items-center space-x-4">
                                 <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=SG" alt="Headshot of Stephen Grofcsik">
                                 <div>
@@ -89,19 +106,29 @@
                                     <p class="text-md font-semibold text-gray-500">Managing Partner</p>
                                 </div>
                             </div>
-                            <svg class="w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <div class="flex flex-col items-center ml-4">
+                                <svg class="expand-icon w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <span class="text-xs text-gray-400 mt-1">Click to expand</span>
+                            </div>
                         </button>
-                        <div class="bio-content" style="max-height: 0;">
-                            <p class="text-gray-600 text-left pt-6">
-                                Prior to founding Atlas Financial Operations, Stephen Grofcsik served as Operations Manager at Virage Capital Management LP, where he oversaw a $400 million private equity fund in the litigation finance space. The fund’s unique strategy required a multi-disciplinary approach, integrating expertise in finance, law, and information technology. Mr. Grofcsik served as the primary liaison for the fund’s audit, accounting, tax, and valuation functions. His role also encompassed managing the day-to-day operations of the fund such as financial reporting, investor communications, treasury operations, and portfolio monitoring. In addition to overseeing day-to-day operations, his responsibilities extended to supporting key initiatives such as fundraising, transaction structuring, and due diligence. Prior to Virage, Mr. Grofcsik was a Finance Director for TFI International, a Canadian based transportation and logistics company operating across the United States, Canada and Mexico through its subsidiaries. In this role, Mr. Grofcsik provided operational oversight and support to several independent operating divisions representing roughly $1 billion in annual revenue. He worked with the division management teams to achieve budget performance, improve profitability, realize cost synergies, and implement strategic plans to grow the business. In addition, Mr. Grofcsik performed due diligence and valuation for several potential acquisitions. Prior to joining TForce Final Mile, Mr. Grofcsik worked at Rothstein Kass & Company, PLLC, where he supervised audits for long/short equity funds, commodity derivative funds, fund of funds, and managed accounts. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel.  Prior to joining Rothstein Kass & Company, Mr. Grofcsik worked for Netherland, Sewell, & Associates where he supported oil and gas reserve evaluation engagements and prepared SEC reserve reports for large oil and gas clients. Mr. Grofcsik received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2003 and became a Certified Public Accountant in 2011.
+                        <div id="stephen-bio" class="bio-content mt-4">
+                            <p class="text-gray-600 text-left leading-relaxed">
+                                Prior to founding Atlas Financial Operations, Stephen Grofcsik served as Operations Manager at Virage Capital Management LP, where he oversaw a $400 million private equity fund in the litigation finance space. The fund's unique strategy required a multi-disciplinary approach, integrating expertise in finance, law, and information technology. Mr. Grofcsik served as the primary liaison for the fund's audit, accounting, tax, and valuation functions. His role also encompassed managing the day-to-day operations of the fund such as financial reporting, investor communications, treasury operations, and portfolio monitoring. In addition to overseeing day-to-day operations, his responsibilities extended to supporting key initiatives such as fundraising, transaction structuring, and due diligence. 
+                                <br><br>
+                                Prior to Virage, Mr. Grofcsik was a Finance Director for TFI International, a Canadian based transportation and logistics company operating across the United States, Canada and Mexico through its subsidiaries. In this role, Mr. Grofcsik provided operational oversight and support to several independent operating divisions representing roughly $1 billion in annual revenue. He worked with the division management teams to achieve budget performance, improve profitability, realize cost synergies, and implement strategic plans to grow the business. In addition, Mr. Grofcsik performed due diligence and valuation for several potential acquisitions. 
+                                <br><br>
+                                Prior to joining TForce Final Mile, Mr. Grofcsik worked at Rothstein Kass & Company, PLLC, where he supervised audits for long/short equity funds, commodity derivative funds, fund of funds, and managed accounts. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel. Prior to joining Rothstein Kass & Company, Mr. Grofcsik worked for Netherland, Sewell, & Associates where he supported oil and gas reserve evaluation engagements and prepared SEC reserve reports for large oil and gas clients. 
+                                <br><br>
+                                Mr. Grofcsik received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2003 and became a Certified Public Accountant in 2011.
                             </p>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg border">
-                         <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md">
+                    <!-- Harrison Blase Bio -->
+                    <div class="bio-card bg-white p-6 md:p-8 rounded-lg shadow-lg border transition-all duration-300">
+                        <button class="bio-toggle w-full flex justify-between items-center text-left focus:outline-none rounded-md p-2 -m-2" data-target="harrison-bio">
                             <div class="flex items-center space-x-4">
                                 <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=HB" alt="Headshot of Harrison Blase">
                                 <div>
@@ -109,13 +136,22 @@
                                     <p class="text-md font-semibold text-gray-500">Partner</p>
                                 </div>
                             </div>
-                            <svg class="w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <div class="flex flex-col items-center ml-4">
+                                <svg class="expand-icon w-6 h-6 text-blue-600 transition-transform transform flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <span class="text-xs text-gray-400 mt-1">Click to expand</span>
+                            </div>
                         </button>
-                        <div class="bio-content" style="max-height: 0;">
-                            <p class="text-gray-600 text-left pt-6">
-                                Harrison Blase currently serves as the Chief Financial Officer of an Arizona Alternative Business Structure (“ABS”) and was most recently in the same role, and a Partner, with Virage Capital Management LP. Mr. Blase was with Virage for over a decade and helped the Investment Manager grow from a strategic seed investor relationship to over a billion dollars of assets under management and earn a place as one of the trailblazers in the litigation finance space. This includes being one of the first asset managers to securitize a portfolio of litigation backed loans and serve as the capital partner to an ABS. Mr. Blase was responsible for managing the audit, tax, accounting, investor reporting, treasury, and valuation process for each of the investment strategies and management company entities. In total, the Virage investment management complex encompassed over three dozen entities and included varied structures, fee mechanics, waterfalls, and reporting obligations. Before joining Virage, Mr. Blase served as a Senior Operations Manager for Kaufman Rossin Fund Services. In this role, Mr. Blase provided technical accounting expertise and client support for over thirty client relationships through oversight of the Dallas accounting team. Mr. Blase was also a member of the Audit Liaison Committee, which oversees the timely completion of all the Firm’s client audits nationwide. Prior to joining Kaufman Rossin Fund Services, Mr. Blase and his partners founded Blue River Partners. Mr. Blase played an integral role in developing the personnel, processes and procedures for Blue River’s outsourced CFO offering. Some of the services provided by the offering include the selection and interface with the administrator, auditor, tax preparer and prime broker; and oversight of the accounting and investor reporting for several private equity funds. Before founding Blue River, Mr. Blase was the Controller at Swank Capital. In this role, Mr. Blase was responsible for financial reporting, managing Fund audits, account setup, internal control systems, and support for various compliance initiatives. In addition, Mr. Blase was the primary interface with the Firm’s auditors, administrators, and banking groups for all daily management issues. This included daily monitoring of cash and position reconciliations, the review and distribution of performance reporting, and maintaining the flow of critical financial and tax information to investors. Prior to joining Swank Capital, Mr. Blase worked for Rothstein Kass & Company, PLLC, helping facilitate audits and tax returns for long /short equity Funds, commodity derivative Funds, and Fund of Funds. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel. His primary focus was on funds in the energy sector; specifically Swank Capital, LLC and a multi-billion-dollar commodity fund complex. Mr. Blase received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2004 and became a Certified Public Accountant in 2006.
+                        <div id="harrison-bio" class="bio-content mt-4">
+                            <p class="text-gray-600 text-left leading-relaxed">
+                                Harrison Blase currently serves as the Chief Financial Officer of an Arizona Alternative Business Structure ("ABS") and was most recently in the same role, and a Partner, with Virage Capital Management LP. Mr. Blase was with Virage for over a decade and helped the Investment Manager grow from a strategic seed investor relationship to over a billion dollars of assets under management and earn a place as one of the trailblazers in the litigation finance space. This includes being one of the first asset managers to securitize a portfolio of litigation backed loans and serve as the capital partner to an ABS. Mr. Blase was responsible for managing the audit, tax, accounting, investor reporting, treasury, and valuation process for each of the investment strategies and management company entities. In total, the Virage investment management complex encompassed over three dozen entities and included varied structures, fee mechanics, waterfalls, and reporting obligations. 
+                                <br><br>
+                                Before joining Virage, Mr. Blase served as a Senior Operations Manager for Kaufman Rossin Fund Services. In this role, Mr. Blase provided technical accounting expertise and client support for over thirty client relationships through oversight of the Dallas accounting team. Mr. Blase was also a member of the Audit Liaison Committee, which oversees the timely completion of all the Firm's client audits nationwide. Prior to joining Kaufman Rossin Fund Services, Mr. Blase and his partners founded Blue River Partners. Mr. Blase played an integral role in developing the personnel, processes and procedures for Blue River's outsourced CFO offering. Some of the services provided by the offering include the selection and interface with the administrator, auditor, tax preparer and prime broker; and oversight of the accounting and investor reporting for several private equity funds. 
+                                <br><br>
+                                Before founding Blue River, Mr. Blase was the Controller at Swank Capital. In this role, Mr. Blase was responsible for financial reporting, managing Fund audits, account setup, internal control systems, and support for various compliance initiatives. In addition, Mr. Blase was the primary interface with the Firm's auditors, administrators, and banking groups for all daily management issues. This included daily monitoring of cash and position reconciliations, the review and distribution of performance reporting, and maintaining the flow of critical financial and tax information to investors. Prior to joining Swank Capital, Mr. Blase worked for Rothstein Kass & Company, PLLC, helping facilitate audits and tax returns for long /short equity Funds, commodity derivative Funds, and Fund of Funds. His responsibilities included financial statement preparation and review, partnership tax return preparation, and training personnel. His primary focus was on funds in the energy sector; specifically Swank Capital, LLC and a multi-billion-dollar commodity fund complex. 
+                                <br><br>
+                                Mr. Blase received his Bachelors of Business Administration and Master in Professional Accounting from The University of Texas at Austin in 2004 and became a Certified Public Accountant in 2006.
                             </p>
                         </div>
                     </div>
@@ -128,7 +164,7 @@
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Our Impact in Action</h2>
-                    <p class="mt-4 text-lg text-gray-600">We provide tangible results. Here’s how we've helped clients like you.</p>
+                    <p class="mt-4 text-lg text-gray-600">We provide tangible results. Here's how we've helped clients like you.</p>
                 </div>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
@@ -207,19 +243,22 @@
 
             bioToggles.forEach(toggle => {
                 toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('svg');
+                    const targetId = toggle.getAttribute('data-target');
+                    const content = document.getElementById(targetId);
+                    const icon = toggle.querySelector('.expand-icon');
+                    const helperText = toggle.querySelector('span');
 
-                    // Check if the content is currently expanded
-                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    // Toggle the expanded state
+                    if (content.classList.contains('expanded')) {
                         // Collapse the bio
-                        content.style.maxHeight = '0px';
+                        content.classList.remove('expanded');
                         icon.classList.remove('rotate-180');
+                        helperText.textContent = 'Click to expand';
                     } else {
                         // Expand the bio
-                        // Set max-height to the scroll height to show all content
-                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.add('expanded');
                         icon.classList.add('rotate-180');
+                        helperText.textContent = 'Click to collapse';
                     }
                 });
             });
