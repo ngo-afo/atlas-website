@@ -43,9 +43,9 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="index.html" class="flex-shrink-0">
-          <!-- Using a placeholder for the logo -->
+          <!-- Updated logo source -->
           <img src="atlas-finops-logo.png" 
-               onerror="this.onerror=null; this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Not+Found';" 
+               onerror="this.onerror=null; this.src='https://placehold.co/150x50/003366/FFFFFF?text=Atlas+FinOps&font=inter';" 
                alt="Atlas FinOps Logo" class="h-12">
         </a>
         <div class="hidden md:flex space-x-6 items-center">
@@ -98,7 +98,7 @@
                 </div>
 
                 <!-- Tab Content Panels -->
-                <div class="bg-gray-50 p-6 md:p-10 rounded-lg shadow-sm">
+                <div class="bg-gray-50 p-6 md:p-10 rounded-lg shadow-sm min-h-[350px]">
                     <!-- Accounting & Finance Panel -->
                     <div x-show="tab === 'accounting'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -108,12 +108,11 @@
                             </div>
                             <div class="lg:col-span-8">
                                 <p class="text-lg text-gray-600 mb-4">Our foundation is built on providing a robust and reliable accounting function. We handle the details so you can focus on the big picture.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Full-service bookkeeping and financial statement preparation.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Complex NAV and shadow NAV calculations.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Budgeting, forecasting, and variance analysis.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Coordination with auditors and tax professionals.</li>
-                                </ul>
+                                <div class="space-y-3 text-gray-700 text-left">
+                                    <p><strong class="font-semibold text-blue-700">Full-Cycle Accounting:</strong> We provide complete bookkeeping and general ledger management, ensuring your financial records are accurate, timely, and compliant. We prepare audit-ready financial statements (P&L, Balance Sheet, Cash Flow) that provide a clear view of your financial health.</p>
+                                    <p><strong class="font-semibold text-blue-700">Advanced Financial Planning:</strong> Go beyond historical data with our budgeting, forecasting, and variance analysis. We help you set financial targets, anticipate future performance, and understand deviations from your plan.</p>
+                                    <p><strong class="font-semibold text-blue-700">Specialized Fund Services:</strong> For investment funds, we offer precise NAV and shadow NAV calculations, handling complex valuation requirements for various investment structures with institutional-grade accuracy.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -126,12 +125,11 @@
                             </div>
                             <div class="lg:col-span-8">
                                 <p class="text-lg text-gray-600 mb-4">We streamline your day-to-day processes, selecting and managing the tools and vendors that best fit your unique business needs.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Vendor selection and management.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Treasury and cash management services.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Project management for system implementations.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Development of internal controls and procedures.</li>
-                                </ul>
+                                <div class="space-y-3 text-gray-700 text-left">
+                                    <p><strong class="font-semibold text-blue-700">Strategic Vendor Management:</strong> We help you select, negotiate with, and manage key service providers like administrators, auditors, and tech platforms, ensuring you have the right partners to support your goals.</p>
+                                    <p><strong class="font-semibold text-blue-700">Treasury & Cash Optimization:</strong> Our team implements effective cash management strategies to optimize liquidity, manage expenses, and oversee capital calls and distributions efficiently.</p>
+                                    <p><strong class="font-semibold text-blue-700">Process & Control Development:</strong> We design and implement robust internal controls and operational procedures, creating a scalable framework that reduces risk and satisfies investor due diligence.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,12 +142,11 @@
                             </div>
                             <div class="lg:col-span-8">
                                 <p class="text-lg text-gray-600 mb-4">We transform large, complex datasets into clear, actionable insights for better decision-making.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Big data aggregation from multiple sources.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Advanced financial modeling and sensitivity analysis.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Compensation and fee structuring models.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Handling of complex, illiquid asset cases.</li>
-                                </ul>
+                                <div class="space-y-3 text-gray-700 text-left">
+                                    <p><strong class="font-semibold text-blue-700">Data Aggregation & Integration:</strong> We consolidate financial and operational data from disparate sources into a single source of truth, creating the foundation for powerful analysis.</p>
+                                    <p><strong class="font-semibold text-blue-700">Advanced Financial Modeling:</strong> Our team builds sophisticated models for scenario planning, sensitivity analysis, and stress testing, allowing you to assess risk and evaluate opportunities with confidence.</p>
+                                    <p><strong class="font-semibold text-blue-700">Complex Structuring Models:</strong> We specialize in modeling complex compensation plans, management/incentive fees, and waterfalls, ensuring calculations are accurate and optimized.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,12 +159,11 @@
                             </div>
                             <div class="lg:col-span-8">
                                 <p class="text-lg text-gray-600 mb-4">We design and deliver visually appealing, timely, and accurate reports that inform stakeholders and empower leadership.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Investor and stakeholder reporting packages.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Custom management dashboards with real-time KPIs.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Board of Directors and executive-level presentations.</li>
-                                    <li class="flex items-start"><span class="font-bold text-blue-600 mr-2 mt-1">&#8227;</span>Regulatory and compliance reporting support.</li>
-                                </ul>
+                                <div class="space-y-3 text-gray-700 text-left">
+                                    <p><strong class="font-semibold text-blue-700">Stakeholder & Investor Reporting:</strong> We create professional, branded reporting packages that clearly communicate performance and enhance your firm's credibility with investors and limited partners.</p>
+                                    <p><strong class="font-semibold text-blue-700">Management Dashboards:</strong> Get the data you need to run your business. We develop custom, real-time dashboards that track KPIs and key metrics, tailored to your specific decision-making needs.</p>
+                                    <p><strong class="font-semibold text-blue-700">Executive & Board Presentations:</strong> We distill complex financial information into clear, concise, and compelling presentations for board meetings and executive reviews, facilitating strategic discussions.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
