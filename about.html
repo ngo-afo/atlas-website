@@ -25,14 +25,16 @@
         }
         /* Style for the bio content transition */
         .bio-content {
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
             overflow: hidden;
             max-height: 0;
             opacity: 0;
+            padding-top: 0;
         }
         .bio-content.expanded {
-            max-height: 1000px;
+            max-height: 2000px;
             opacity: 1;
+            padding-top: 1rem;
         }
         /* Hover effect for bio cards */
         .bio-card:hover {
@@ -113,7 +115,7 @@
                                 <span class="text-xs text-gray-400 mt-1">Click to expand</span>
                             </div>
                         </button>
-                        <div id="stephen-bio" class="bio-content mt-4">
+                        <div id="stephen-bio" class="bio-content">
                             <p class="text-gray-600 text-left leading-relaxed">
                                 Prior to founding Atlas Financial Operations, Stephen Grofcsik served as Operations Manager at Virage Capital Management LP, where he oversaw a $400 million private equity fund in the litigation finance space. The fund's unique strategy required a multi-disciplinary approach, integrating expertise in finance, law, and information technology. Mr. Grofcsik served as the primary liaison for the fund's audit, accounting, tax, and valuation functions. His role also encompassed managing the day-to-day operations of the fund such as financial reporting, investor communications, treasury operations, and portfolio monitoring. In addition to overseeing day-to-day operations, his responsibilities extended to supporting key initiatives such as fundraising, transaction structuring, and due diligence. 
                                 <br><br>
@@ -143,7 +145,7 @@
                                 <span class="text-xs text-gray-400 mt-1">Click to expand</span>
                             </div>
                         </button>
-                        <div id="harrison-bio" class="bio-content mt-4">
+                        <div id="harrison-bio" class="bio-content">
                             <p class="text-gray-600 text-left leading-relaxed">
                                 Harrison Blase currently serves as the Chief Financial Officer of an Arizona Alternative Business Structure ("ABS") and was most recently in the same role, and a Partner, with Virage Capital Management LP. Mr. Blase was with Virage for over a decade and helped the Investment Manager grow from a strategic seed investor relationship to over a billion dollars of assets under management and earn a place as one of the trailblazers in the litigation finance space. This includes being one of the first asset managers to securitize a portfolio of litigation backed loans and serve as the capital partner to an ABS. Mr. Blase was responsible for managing the audit, tax, accounting, investor reporting, treasury, and valuation process for each of the investment strategies and management company entities. In total, the Virage investment management complex encompassed over three dozen entities and included varied structures, fee mechanics, waterfalls, and reporting obligations. 
                                 <br><br>
@@ -248,14 +250,14 @@
                     const icon = toggle.querySelector('.expand-icon');
                     const helperText = toggle.querySelector('span');
 
-                    // Toggle the expanded state
-                    if (content.classList.contains('expanded')) {
-                        // Collapse the bio
+                    // Only toggle the specific bio that was clicked
+                    if (content && content.classList.contains('expanded')) {
+                        // Collapse this specific bio
                         content.classList.remove('expanded');
                         icon.classList.remove('rotate-180');
                         helperText.textContent = 'Click to expand';
-                    } else {
-                        // Expand the bio
+                    } else if (content) {
+                        // Expand this specific bio
                         content.classList.add('expanded');
                         icon.classList.add('rotate-180');
                         helperText.textContent = 'Click to collapse';
