@@ -6,14 +6,14 @@
     <title>Atlas FinOps - Outsourced Financial Operations</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Use the Inter font family */
+        /* Use the Montserrat font family */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         
         /* Smooth scrolling */
@@ -21,23 +21,64 @@
             scroll-behavior: smooth;
         }
         
-        /* Hero background animation */
+        /* Enhanced Hero background with floating animations */
         .hero-bg {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             position: relative;
             overflow: hidden;
         }
-        
-        .hero-bg::before {
-            content: '';
+
+        /* Floating geometric shapes */
+        .floating-shape {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
+            opacity: 0.1;
+            pointer-events: none;
         }
+
+        .floating-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        .floating-triangle {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 52px solid #3b82f6;
+            animation: float 25s infinite linear, rotate 30s infinite linear;
+        }
+
+        .floating-square {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #1d4ed8, #3b82f6);
+            transform: rotate(45deg);
+            animation: float 18s infinite linear, rotate 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(-50px); }
+            100% { transform: translateY(-100px) translateX(50px); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Staggered animation delays */
+        .shape-1 { animation-delay: 0s; left: 10%; }
+        .shape-2 { animation-delay: -5s; left: 25%; }
+        .shape-3 { animation-delay: -10s; left: 50%; }
+        .shape-4 { animation-delay: -15s; left: 75%; }
+        .shape-5 { animation-delay: -8s; left: 90%; }
+        .shape-6 { animation-delay: -12s; left: 35%; }
+        .shape-7 { animation-delay: -18s; left: 65%; }
+        .shape-8 { animation-delay: -3s; left: 15%; }
         
         /* Fade in animations */
         .fade-in-section {
@@ -70,10 +111,6 @@
             transition: all 0.3s ease;
         }
         
-        /* Stats counter animation */
-        .stat-number {
-            font-variant-numeric: tabular-nums;
-        }
         
         /* Gradient text */
         .gradient-text {
@@ -102,11 +139,13 @@
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
     <a href="index.html">
-      <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-12">
+      <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-16">
     </a>
     <div class="hidden md:flex space-x-6 items-center">
       <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+      <a href="offering.html" class="text-gray-600 hover:text-blue-600 transition">Offering</a>
       <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+      <a href="technology.html" class="text-gray-600 hover:text-blue-600 transition">Technology</a>
       <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
       <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
     </div>
@@ -126,117 +165,120 @@
 
     <!-- 1. Enhanced Hero Section -->
     <section class="hero-bg text-center py-20 md:py-32 relative">
+        <!-- Floating geometric shapes -->
+        <div class="floating-shape floating-circle shape-1"></div>
+        <div class="floating-shape floating-triangle shape-2"></div>
+        <div class="floating-shape floating-square shape-3"></div>
+        <div class="floating-shape floating-circle shape-4"></div>
+        <div class="floating-shape floating-triangle shape-5"></div>
+        <div class="floating-shape floating-square shape-6"></div>
+        <div class="floating-shape floating-circle shape-7"></div>
+        <div class="floating-shape floating-triangle shape-8"></div>
+
         <div class="max-w-screen-xl mx-auto px-6 relative z-10">
             <div class="fade-in-section">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
-                    Your Expert Partner in <span class="gradient-text">Financial Operations</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-normal text-gray-900 leading-tight mb-6">
+                    <span class="gradient-text font-medium">Financial Leadership</span>, Powered by People and Technology
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-10 leading-relaxed">
-                    We provide comprehensive, outsourced accounting, finance, and operational support, allowing you to focus on growth and investment performance.
+                    We bring strategic finance and operations leadership that drives efficiency, reduces costs, and positions you for sustainable growth.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="contact.html" class="btn-primary text-white font-semibold px-8 py-4 rounded-lg text-lg inline-block">
-                        Get Started Today
+                        Connect with Atlas
                     </a>
-                    <a href="services.html" class="text-blue-600 font-semibold px-8 py-4 rounded-lg border-2 border-blue-200 hover:border-blue-600 hover:bg-blue-50 transition text-lg inline-block">
-                        Explore Our Services
+                    <a href="offering.html" class="text-blue-600 font-semibold px-8 py-4 rounded-lg border-2 border-blue-200 hover:border-blue-600 hover:bg-blue-50 transition text-lg inline-block">
+                        Explore Our Offerings
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. Trust Indicators / Stats Section -->
-    <section class="py-16 bg-white fade-in-section">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Trusted by Growing Businesses</h2>
-                <p class="text-lg text-gray-600">We've helped firms manage over $1B+ in assets</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="fade-in-section">
-                    <div class="stat-number text-4xl font-bold text-blue-600 mb-2">50+</div>
-                    <div class="text-gray-600">Clients Served</div>
-                </div>
-                <div class="fade-in-section">
-                    <div class="stat-number text-4xl font-bold text-blue-600 mb-2">$1B+</div>
-                    <div class="text-gray-600">Assets Managed</div>
-                </div>
-                <div class="fade-in-section">
-                    <div class="stat-number text-4xl font-bold text-blue-600 mb-2">20+</div>
-                    <div class="text-gray-600">Years Experience</div>
-                </div>
-                <div class="fade-in-section">
-                    <div class="stat-number text-4xl font-bold text-blue-600 mb-2">99%</div>
-                    <div class="text-gray-600">Client Satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 3. Enhanced Services Section -->
     <section class="py-20 md:py-28 bg-gray-50 fade-in-section">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Core Services</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Service Framework: Customized to Meet Your Needs</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tailored solutions for investment managers and growing businesses, designed to scale with your success.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Service Item 1: Accounting & Finance -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center group">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Pillar 1: Financial Strategy & Oversight -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-left group">
                     <div class="flex justify-center mb-6">
                         <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 3h.008v.008H8.25v-.008zm0 3h.008v.008H8.25v-.008zm3-6h.008v.008H11.25v-.008zm0 3h.008v.008H11.25v-.008zm0 3h.008v.008H11.25v-.008zm3-6h.008v.008H14.25v-.008zm0 3h.008v.008H14.25v-.008zM4.5 12.75h15A2.25 2.25 0 0121.75 15v5.25c0 .621-.504 1.125-1.125 1.125H3.375c-.621 0-1.125-.504-1.125-1.125V15a2.25 2.25 0 012.25-2.25z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Accounting & Finance</h3>
-                    <p class="text-gray-600 mb-6">From bookkeeping to complex NAV calculations, we ensure accuracy and efficiency in all financial operations.</p>
-                    <a href="services.html#accounting" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Financial Strategy & Oversight</h3>
+                    <p class="text-gray-600 mb-6">Providing institutional-level CFO guidance to align growth and efficiency.</p>
+                    <a href="offering.html#financial-strategy" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
                         Learn More →
                     </a>
                 </div>
-                
-                <!-- Service Item 2: Operations -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center group">
+
+                <!-- Pillar 2: Operational Leadership -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-left group">
                     <div class="flex justify-center mb-6">
                         <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Operations</h3>
-                    <p class="text-gray-600 mb-6">We determine the optimal operational strategy, product, or vendor based on your specific business needs.</p>
-                    <a href="services.html#operations" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Operational Leadership</h3>
+                    <p class="text-gray-600 mb-6">Streamlining processes and building scalable operating models for the future.</p>
+                    <a href="offering.html#operational-leadership" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
                         Learn More →
                     </a>
                 </div>
 
-                <!-- Service Item 3: Data Analysis -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center group">
+                <!-- Pillar 3: Technology & AI Implementation -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-left group">
                     <div class="flex justify-center mb-6">
                          <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Data Analysis</h3>
-                    <p class="text-gray-600 mb-6">We aggregate data, model transactions, and handle complex asset cases to provide clear, actionable insights.</p>
-                    <a href="services.html#data" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Technology & AI Implementation</h3>
+                    <p class="text-gray-600 mb-6">Leveraging advanced tools and AI to optimize workflows and reduce costs.</p>
+                    <a href="offering.html#technology-ai" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
                         Learn More →
                     </a>
                 </div>
+            </div>
 
-                <!-- Service Item 4: Custom Reporting -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center group">
-                    <div class="flex justify-center mb-6">
-                        <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+            <!-- Bottom Row - Centered between top gaps -->
+            <div class="flex justify-center mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+
+                    <!-- Pillar 4: Analytics & Business Intelligence -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-left group">
+                        <div class="flex justify-center mb-6">
+                            <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Analytics & Business Intelligence</h3>
+                        <p class="text-gray-600 mb-6">Unlocking value through data-driven insights and performance analysis.</p>
+                        <a href="offering.html#analytics-bi" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
+                            Learn More →
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Reporting</h3>
-                    <p class="text-gray-600 mb-6">We create reports for decision-makers that are timely, accurate, and visually appealing to inform and impress.</p>
-                    <a href="services.html#reporting" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
-                        Learn More →
-                    </a>
+
+                    <!-- Pillar 5: Reporting & Stakeholder Transparency -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-left group">
+                        <div class="flex justify-center mb-6">
+                            <svg class="service-icon w-16 h-16 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Reporting & Stakeholder Transparency</h3>
+                        <p class="text-gray-600 mb-6">Designing customized reporting that empowers leadership and investor alike.</p>
+                        <a href="offering.html#reporting-transparency" class="text-blue-600 font-semibold hover:text-blue-800 transition group-hover:underline">
+                            Learn More →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,35 +288,66 @@
     <section class="py-20 bg-white fade-in-section">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Client Success Stories</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Perspectives</h2>
                 <p class="text-xl text-gray-600">Real results from real partnerships</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 shadow-lg">
+                <!-- Client Perspective Card -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-blue-800 ml-4">Start-up Hedge Fund Launch</h3>
+                        <h3 class="text-2xl font-bold text-blue-800">Client</h3>
                     </div>
-                    <p class="text-gray-700 mb-4"><strong class="text-blue-600">Challenge:</strong> A new fund needed to establish institutional-grade financial infrastructure on a tight budget before its launch.</p>
-                    <p class="text-gray-700 mb-4"><strong class="text-blue-600">Solution:</strong> Atlas FinOps implemented a full accounting system, established valuation policies, and managed all setup with fund administrators and prime brokers.</p>
-                    <p class="text-gray-700"><strong class="text-blue-600">Result:</strong> The fund launched smoothly with day-one operational readiness, impressing early investors and allowing the portfolio manager to focus solely on investment strategy.</p>
+                    <blockquote class="text-gray-700 italic mb-6 leading-relaxed text-lg">
+                        "Transitioning to a new CFO proved more complex than expected. With a decade of legacy systems and investor relationships at stake, the fund manager needed stability and expertise to regain momentum."
+                    </blockquote>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>Faced disruption during a CFO transition in a decade-old, $1B fund complex</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>Legacy systems and operational challenges slowed progress and strained stakeholder confidence</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>The return of institutional knowledge through Atlas quickly stabilized operations and restored trust with investors, service providers, and owners</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 shadow-lg">
+
+                <!-- Atlas Perspective Card -->
+                <div class="bg-gradient-to-br from-gray-50 to-slate-50 p-8 rounded-2xl border-2 border-gray-300 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-green-800 ml-4">SMB Growth Scaling</h3>
+                        <h3 class="text-2xl font-bold text-gray-800">Atlas</h3>
                     </div>
-                    <p class="text-gray-700 mb-4"><strong class="text-green-600">Challenge:</strong> A fast-growing tech company's bookkeeping couldn't keep up, leading to inaccurate financial reports and a lack of forward visibility.</p>
-                    <p class="text-gray-700 mb-4"><strong class="text-green-600">Solution:</strong> We overhauled their accounting processes, provided monthly board-ready financial reporting, and created a dynamic financial model for forecasting.</p>
-                    <p class="text-gray-700"><strong class="text-green-600">Result:</strong> The leadership team gained clear visibility into their financial health, enabling them to secure a new round of funding and make data-driven strategic decisions.</p>
+                    <blockquote class="text-gray-700 italic mb-6 leading-relaxed text-lg">
+                        "By re-engaging a legacy CFO as an Atlas partner, we were able to combine deep institutional knowledge with our flexible model bringing leadership, oversight, and efficiency back into the organization."
+                    </blockquote>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>Re-engaged a former CFO as an Atlas partner, bringing back deep institutional knowledge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>Provided remote leadership and oversight while enabling continuity with other responsibilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span>Leveraged the Atlas model to efficiently resolve legacy issues and get the manager back on track with all key stakeholders</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -303,16 +376,16 @@
                 <div class="bg-gradient-to-br from-blue-700 to-blue-800 text-white p-12 md:p-20 flex flex-col justify-center relative overflow-hidden">
                     <div class="absolute inset-0 bg-blue-600 opacity-10"></div>
                     <div class="relative z-10">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Streamline Your Operations?</h2>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Strengthen Your Financial Leadership?</h2>
                         <p class="text-xl opacity-90 mb-8 leading-relaxed">
                             Let's discuss how our expert team can support your firm's success. Contact us today for a complimentary consultation.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="contact.html" class="bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition text-center">
-                                Get in Touch
+                                Start the Conversation
                             </a>
-                            <a href="services.html" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-blue-700 transition text-center">
-                                View Services
+                            <a href="offering.html" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-blue-700 transition text-center">
+                                View Offerings
                             </a>
                         </div>
                     </div>
@@ -337,7 +410,9 @@
         <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
         <ul class="space-y-2">
           <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="offering.html" class="hover:text-white transition">Offering</a></li>
           <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+          <li><a href="technology.html" class="hover:text-white transition">Technology</a></li>
           <li><a href="about.html" class="hover:text-white transition">About</a></li>
           <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
         </ul>
@@ -347,7 +422,7 @@
         <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
         <ul class="space-y-2">
           <li><a href="mailto:info@atlasfinops.com" class="hover:text-white transition">info@atlasfinops.com</a></li>
-          <li><p>(555) 123-4567</p></li>
+          <li><p>(972) 754-6843</p></li>
         </ul>
       </div>
     </div>
@@ -375,39 +450,6 @@
         observer.observe(section);
     });
 
-    // Animate stats on scroll
-    const animateStats = () => {
-        const statNumbers = document.querySelectorAll('.stat-number');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const finalValue = target.textContent;
-                    const numericValue = parseInt(finalValue.replace(/\D/g, ''));
-                    const suffix = finalValue.replace(/[\d]/g, '');
-                    
-                    let current = 0;
-                    const increment = numericValue / 50;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= numericValue) {
-                            target.textContent = finalValue;
-                            clearInterval(timer);
-                        } else {
-                            target.textContent = Math.floor(current) + suffix;
-                        }
-                    }, 30);
-                    
-                    observer.unobserve(target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statNumbers.forEach(stat => observer.observe(stat));
-    };
-
-    // Initialize stats animation
-    animateStats();
 </script>
 
 </body>

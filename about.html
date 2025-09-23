@@ -7,11 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Use the Inter font family */
+        /* Use the Montserrat font family */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         /* Styles for scroll animations */
         .fade-in-section {
@@ -64,11 +64,13 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="index.html">
-          <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-12">
+          <img src="atlas-finops-logo.png" alt="Atlas FinOps Logo" class="h-16">
         </a>
         <div class="hidden md:flex space-x-6 items-center">
           <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+          <a href="offering.html" class="text-gray-600 hover:text-blue-600 transition">Offering</a>
           <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+          <a href="technology.html" class="text-gray-600 hover:text-blue-600 transition">Technology</a>
           <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
           <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
         </div>
@@ -79,32 +81,11 @@
 
     <main>
 
-        <section class="bg-gray-50 text-center py-20 md:py-28">
-            <div class="max-w-screen-xl mx-auto px-6">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
-                    About <span class="text-blue-600">Atlas</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                    We are a team of dedicated finance professionals committed to providing institutional-quality operational support to the investment management and small business communities.
-                </p>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-white fade-in-section">
-            <div class="max-w-screen-xl mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Our Philosophy</h2>
-                    <p class="mt-6 text-xl text-gray-600">
-                        We believe that a world-class financial infrastructure shouldn't be exclusive to the largest firms. Our mission is to democratize access to top-tier finance and operations talent, allowing our clients to compete and thrive. We don't believe in one-size-fits-all solutions; we listen to your needs and build the specific operational strategy that works for you.
-                    </p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Founders Section -->
         <section class="py-16 md:py-24 bg-blue-50 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Meet Our Leadership</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Meet Our Founders</h2>
                     <p class="mt-4 text-lg text-gray-600">Our team's multi-disciplinary expertise is our greatest asset.</p>
                     <p class="mt-2 text-sm text-gray-500">Click on a team member to learn more about their background</p>
                 </div>
@@ -117,7 +98,7 @@
                                 <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=SG" alt="Headshot of Stephen Grofcsik">
                                 <div>
                                     <h3 class="text-xl md:text-2xl font-bold text-blue-800">Stephen Grofcsik, CPA</h3>
-                                    <p class="text-md font-semibold text-gray-500">Managing Partner</p>
+                                    <p class="text-md font-semibold text-gray-500">Founding Partner</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center ml-4">
@@ -149,7 +130,7 @@
                                 <img class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover flex-shrink-0" src="https://placehold.co/256x256/E2E8F0/4A5568?text=HB" alt="Headshot of Harrison Blase">
                                 <div>
                                     <h3 class="text-xl md:text-2xl font-bold text-blue-800">Harrison Blase, CPA</h3>
-                                    <p class="text-md font-semibold text-gray-500">Partner</p>
+                                    <p class="text-md font-semibold text-gray-500">Founding Partner</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center ml-4">
@@ -178,38 +159,32 @@
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white fade-in-section">
+        <!-- Founding Principle -->
+        <section class="py-16 md:py-24 bg-gray-50 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Our Impact in Action</h2>
-                    <p class="mt-4 text-lg text-gray-600">We provide tangible results. Here's how we've helped clients like you.</p>
-                </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-blue-600">Start-up Hedge Fund Launch</h3>
-                        <p class="mt-4 text-gray-600"><strong>Challenge:</strong> A new fund needed to establish institutional-grade financial infrastructure on a tight budget before its launch.</p>
-                        <p class="mt-3 text-gray-600"><strong>Solution:</strong> Atlas FinOps implemented a full accounting system, established valuation policies, and managed all setup with fund administrators and prime brokers.</p>
-                        <p class="mt-3 text-gray-600"><strong>Result:</strong> The fund launched smoothly with day-one operational readiness, impressing early investors and allowing the portfolio manager to focus solely on investment strategy.</p>
-                    </div>
-                    <div class="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
-                        <h3 class="text-2xl font-bold text-blue-600">SMB Growth Scaling</h3>
-                        <p class="mt-4 text-gray-600"><strong>Challenge:</strong> A fast-growing tech company's bookkeeping couldn't keep up, leading to inaccurate financial reports and a lack of forward visibility.</p>
-                        <p class="mt-3 text-gray-600"><strong>Solution:</strong> We overhauled their accounting processes, provided monthly board-ready financial reporting, and created a dynamic financial model for forecasting.</p>
-                        <p class="mt-3 text-gray-600"><strong>Result:</strong> The leadership team gained clear visibility into their financial health, enabling them to secure a new round of funding and make data-driven strategic decisions.</p>
-                    </div>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Founding Principle</h2>
+                    <p class="mt-6 text-xl text-gray-600">
+                        Our philosophy is simple: experienced leadership creates efficiency today and resilience tomorrow. We combine institutional expertise with modern tools to help clients grow smarter, leaner, and stronger.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="bg-blue-700 text-white">
-            <div class="max-w-screen-xl mx-auto px-6 py-20 text-center">
-                <h2 class="text-4xl font-bold">Let's Build Your Financial Foundation</h2>
-                <p class="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
-                    Ready to discuss how our team can support your firm's success? Contact us today for a complimentary consultation.
-                </p>
-                <a href="contact.html" class="mt-8 inline-block bg-white text-blue-700 font-semibold px-10 py-4 rounded-md hover:bg-gray-200 transition text-lg">
-                    Get in Touch
-                </a>
+        <!-- A Platform for Experienced Leaders to Thrive -->
+        <section class="py-16 md:py-24 bg-blue-100 fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900">A Platform for Experienced Leaders to Thrive</h2>
+                    <p class="mt-6 text-xl text-gray-600">
+                        Atlas is building a collaborative network of experienced CFOs and financial leaders. As a partner, you'll leverage your institutional knowledge, work alongside peers, and access advanced tools to create lasting impact for clients.
+                    </p>
+                    <div class="mt-8">
+                        <a href="contact.html" class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg">
+                            Connect About Joining Atlas
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -226,9 +201,18 @@
             <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul class="space-y-2">
               <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="offering.html" class="hover:text-white transition">Offering</a></li>
               <li><a href="services.html" class="hover:text-white transition">Services</a></li>
               <li><a href="about.html" class="hover:text-white transition">About</a></li>
               <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:info@atlasfinops.com" class="hover:text-white transition">info@atlasfinops.com</a></li>
+              <li><p>(972) 754-6843</p></li>
             </ul>
           </div>
         </div>
