@@ -43,84 +43,64 @@
             scroll-behavior: smooth;
         }
 
-        /* Hero background with gradient mesh */
+        /* Hero background with floating shapes */
         .hero-bg {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: #ffffff;
             position: relative;
             overflow: hidden;
         }
 
-        /* Gradient mesh blobs */
-        .hero-bg::before,
-        .hero-bg::after {
-            content: '';
+        /* Floating geometric shapes */
+        .floating-shape {
             position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float-blob 20s ease-in-out infinite;
-        }
-
-        .hero-bg::before {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
-            top: -150px;
-            left: -100px;
-            animation-delay: 0s;
-        }
-
-        .hero-bg::after {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
-            bottom: -100px;
-            right: -50px;
-            animation-delay: -10s;
-        }
-
-        .gradient-blob-1,
-        .gradient-blob-2 {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            animation: float-blob 25s ease-in-out infinite;
+            opacity: 0.1;
             pointer-events: none;
         }
 
-        .gradient-blob-1 {
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, #8b5cf6 0%, #3b82f6 50%, #06b6d4 100%);
-            top: 50%;
-            right: 10%;
-            animation-delay: -5s;
+        .floating-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
         }
 
-        .gradient-blob-2 {
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, #06b6d4 0%, #8b5cf6 50%, #3b82f6 100%);
-            top: 20%;
-            left: 50%;
-            animation-delay: -15s;
+        .floating-triangle {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 52px solid #3b82f6;
+            animation: float 25s infinite linear, rotate 30s infinite linear;
         }
 
-        @keyframes float-blob {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-            }
-            25% {
-                transform: translate(30px, -30px) scale(1.1);
-            }
-            50% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-            75% {
-                transform: translate(20px, 10px) scale(1.05);
-            }
+        .floating-square {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #1d4ed8, #3b82f6);
+            transform: rotate(45deg);
+            animation: float 18s infinite linear, rotate 20s infinite linear;
         }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(-50px); }
+            100% { transform: translateY(-100px) translateX(50px); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Staggered animation delays and positions */
+        .shape-1 { animation-delay: 0s; left: 10%; }
+        .shape-2 { animation-delay: -5s; left: 25%; }
+        .shape-3 { animation-delay: -10s; left: 50%; }
+        .shape-4 { animation-delay: -15s; left: 75%; }
+        .shape-5 { animation-delay: -8s; left: 90%; }
+        .shape-6 { animation-delay: -12s; left: 35%; }
+        .shape-7 { animation-delay: -18s; left: 65%; }
+        .shape-8 { animation-delay: -3s; left: 15%; }
 
         /* Fade in animations */
         .fade-in-section {
@@ -196,8 +176,16 @@
 
     <!-- Hero Section -->
     <section class="hero-bg text-center py-20 md:py-28">
-        <div class="gradient-blob-1"></div>
-        <div class="gradient-blob-2"></div>
+        <!-- Floating Shapes -->
+        <div class="floating-shape floating-circle shape-1"></div>
+        <div class="floating-shape floating-triangle shape-2"></div>
+        <div class="floating-shape floating-square shape-3"></div>
+        <div class="floating-shape floating-circle shape-4"></div>
+        <div class="floating-shape floating-triangle shape-5"></div>
+        <div class="floating-shape floating-square shape-6"></div>
+        <div class="floating-shape floating-circle shape-7"></div>
+        <div class="floating-shape floating-triangle shape-8"></div>
+
         <div class="max-w-screen-xl mx-auto px-6 relative z-10">
             <div class="promo-badge fade-in-section">
                 ⭐ First Two Months Free for New Clients
