@@ -73,7 +73,7 @@ This is the same form used on your main contact page, so all inquiries will go t
 
 **Email Address** (appears in hero and form):
 ```html
-<a href="mailto:info@atlasfinops.com"
+<a href="mailto:inquiries@atlasfinops.com"
 ```
 Replace with your preferred contact email if different.
 
@@ -147,10 +147,10 @@ Without this image, social media platforms will use a generic preview when your 
 
 **Before going live**, verify:
 - [x] ✅ Formspree form is connected (using your existing form `xeozrqav`)
-- [ ] Email address `info@atlasfinops.com` is correct throughout the page
+- [ ] Email address `inquiries@atlasfinops.com` is correct throughout the page
 - [ ] Update the `og:url` meta tag with your final URL if different (line 16)
 - [ ] (Optional) Create and add Open Graph banner image (1200x630px)
-- [ ] Test the contact form submission to ensure you receive emails at info@atlasfinops.com
+- [ ] Test the contact form submission to ensure you receive emails at inquiries@atlasfinops.com
 
 ## 📊 Analytics (Optional)
 
@@ -169,7 +169,7 @@ To add Google Analytics, insert before the closing `</head>` tag:
 
 ## 🎯 Conversion Optimization Tips
 
-1. **Test form submissions** - Submit a test through the form to verify emails arrive at info@atlasfinops.com
+1. **Test form submissions** - Submit a test through the form to verify emails arrive at inquiries@atlasfinops.com
 2. **Test on mobile** - most traffic will be mobile, ensure form works perfectly
 3. **Add real testimonials** - replace placeholders with actual client feedback and names
 4. **Create a banner image** for social sharing (1200x630px) - increases click-through from social media
@@ -189,7 +189,7 @@ Website/
 ## 🆘 Support
 
 For questions or issues:
-- Email: info@atlasfinops.com
+- Email: inquiries@atlasfinops.com
 - GitHub Issues: https://github.com/ngo-afo/atlas-website/issues
 
 ## 📄 License
