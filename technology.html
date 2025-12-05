@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - Atlas FinOps</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Montserrat font family */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Styles for fade-in scroll animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Site Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="atlas-finops-logo.png"
+               onerror="this.onerror=null; this.src='https://placehold.co/150x50/003366/FFFFFF?text=Atlas+FinOps&font=inter';"
+               alt="Atlas FinOps Logo" class="h-16">
+        </a>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+          <a href="offering.html" class="text-gray-600 hover:text-blue-600 transition">Offering</a>
+          <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+          <a href="technology.html" class="text-gray-600 hover:text-blue-600 transition">Technology</a>
+          <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+          <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-600 hover:text-blue-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+           </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- 1. Hero Section -->
+        <section class="bg-gray-50 text-center py-16 md:py-20">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Technology Stack
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Cutting-edge tools with proven enterprise solutions for efficient, secure operations
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. AI-Powered Capabilities Section -->
+        <section class="py-16 md:py-20 bg-blue-50 fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">AI-Powered Capabilities</h2>
+                    <p class="mt-4 text-lg text-gray-600">From back-office automation to strategic intelligence</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                    <!-- Current Capabilities -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Current: Manual Task Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Quick wins and immediate cost savings</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-700 text-sm flex-grow">
+                            <li>• Invoice & payables automation</li>
+                            <li>• Payroll reconciliation</li>
+                            <li>• Financial close acceleration</li>
+                            <li>• Document processing & classification</li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-blue-800 font-semibold text-sm">Result: Reduced manual work and faster processing</p>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Capabilities -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Enhanced: Decision Support</h3>
+                                <p class="text-gray-600 text-sm mt-1">Stronger compliance and proactive decisions</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-700 text-sm flex-grow">
+                            <li>• Treasury & cash management</li>
+                            <li>• Budgeting & forecasting</li>
+                            <li>• Compliance monitoring</li>
+                            <li>• Intelligent reporting with insights</li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-blue-800 font-semibold text-sm">Result: Improved transparency and strategic decisions</p>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Intelligence -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Advanced: CFO Intelligence</h3>
+                                <p class="text-gray-600 text-sm mt-1">Predictive intelligence and collaborative learning</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-700 text-sm flex-grow">
+                            <li>• Complex allocation automation</li>
+                            <li>• Strategic advisory AI co-pilot</li>
+                            <li>• Cross-partner intelligence</li>
+                            <li>• Industry benchmarking</li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-blue-800 font-semibold text-sm">Result: "CFO superpowers" through predictive intelligence</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Technology Stack Section -->
+        <section class="py-16 md:py-20 bg-white fade-in-section">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Technology Stack</h2>
+                    <p class="mt-4 text-lg text-gray-600">Enterprise-grade tools powering our AI capabilities</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+
+                    <!-- AI & Automation -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col min-h-[320px]">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6 text-blue-600" fill="currentColor">
+                                    <path d="M11 2l1.5 5H18l-4 3 1.5 5L11 13 6.5 15 8 10 4 7h5.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">AI & Automation</h3>
+                                <p class="text-gray-600 text-base mt-1">Natural-language workflows, research, and automation with frontier models</p>
+                                <ul class="text-gray-700 text-base mt-2 space-y-1">
+                                    <li>• Rapid drafting, reconciliation, and insight generation</li>
+                                    <li>• Guardrail patterns for accuracy and privacy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 mt-auto pt-4 flex-wrap justify-center">
+                            <img src="gpt.png" alt="ChatGPT" class="h-12 w-auto object-contain">
+                            <img src="Google_Gemini_logo.png" alt="Google Gemini" class="h-12 w-auto object-contain">
+                            <img src="Claude_AI_logo.png" alt="Claude AI" class="h-12 w-auto object-contain">
+                            <img src="Perplexity-Logo.png" alt="Perplexity" class="h-16 w-auto object-contain">
+                            <img src="Grok-Logo.png" alt="Grok" class="h-16 w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Core Infrastructure -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col min-h-[320px]">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6 text-blue-600" fill="currentColor">
+                                    <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3H4V6zm0 6h16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Core Infrastructure</h3>
+                                <p class="text-gray-600 text-base mt-1">Reliable backbone for data services, automations, and internal apps</p>
+                                <ul class="text-gray-700 text-base mt-2 space-y-1">
+                                    <li>• Typed interfaces, testing, CI/CD</li>
+                                    <li>• Observability & logging for auditability</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 mt-auto pt-4 flex-wrap justify-center">
+                            <img src="python-logo-master-v3-TM-flattened.png" alt="Python" class="h-14 w-auto object-contain">
+                            <img src="Microsoft_.NET_Logo.png" alt=".NET" class="h-14 w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Business & Finance -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col min-h-[320px]">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6 text-blue-600" fill="currentColor">
+                                    <path d="M10 4h4a2 2 0 0 1 2 2v2h4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8h4V6a2 2 0 0 1 2-2zm4 4V6h-4v2h4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Business & Finance</h3>
+                                <p class="text-gray-600 text-base mt-1">Finance, collaboration, and productivity toolkit</p>
+                                <ul class="text-gray-700 text-base mt-2 space-y-1">
+                                    <li>• Structured bookkeeping & reconciliations</li>
+                                    <li>• Secure document & approval workflows</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 mt-auto pt-4 flex-wrap justify-center">
+                            <img src="quickbooks.png" alt="QuickBooks" class="h-12 w-auto object-contain">
+                            <img src="M365-Apps-1024x837.png" alt="Microsoft 365" class="h-20 w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Development & Workflow -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col min-h-[320px]">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-6 h-6 text-blue-600" fill="currentColor">
+                                    <path d="M8 7l-5 5 5 5 1.5-1.5L6 12l3.5-3.5L8 7zm8 0l-1.5 1.5L18 12l-3.5 3.5L16 17l5-5-5-5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Development & Workflow</h3>
+                                <p class="text-gray-600 text-base mt-1">Modern toolchain with AI-assisted delivery and governance</p>
+                                <ul class="text-gray-700 text-base mt-2 space-y-1">
+                                    <li>• Branch policies, reviews, and release gates</li>
+                                    <li>• Reusable templates for repeatable builds</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 mt-auto pt-4 flex-wrap justify-center">
+                            <img src="copilot-logo-color.png" alt="GitHub Copilot" class="h-12 w-auto object-contain">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Summary Section -->
+                <div class="mt-12 rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 text-center max-w-4xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Built for Accuracy, Speed & Scale</h3>
+                    <p class="text-gray-700">
+                        This stack blends frontier AI with enterprise standards — delivering faster close cycles, cleaner data,
+                        and automated, auditable back-office operations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CTA Section -->
+        <section class="bg-blue-700 text-white">
+            <div class="max-w-screen-xl mx-auto px-6 py-16 text-center">
+                <h2 class="text-3xl font-bold">Ready to Transform Your Financial Operations?</h2>
+                <p class="mt-3 text-lg opacity-90 max-w-2xl mx-auto">
+                    Discover how our technology stack can drive efficiency and growth for your organization.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-blue-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition text-lg shadow-md hover:shadow-lg">
+                        Schedule Consultation
+                    </a>
+                    <a href="services.html" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-blue-700 transition text-lg">
+                        View Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+      <div class="max-w-screen-xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-bold text-white mb-4">Atlas FinOps</h3>
+            <p class="max-w-md">Your expert partner in outsourced financial operations for investment managers and growing businesses.</p>
+          </div>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="offering.html" class="hover:text-white transition">Offering</a></li>
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="technology.html" class="hover:text-white transition">Technology</a></li>
+              <li><a href="about.html" class="hover:text-white transition">About</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:info@atlasfinops.com" class="hover:text-white transition">info@atlasfinops.com</a></li>
+              <li><p>(972) 754-6843</p></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <p>&copy; 2024 Atlas FinOps. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
